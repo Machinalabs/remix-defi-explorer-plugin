@@ -1,15 +1,15 @@
-# Remix Etherscan Plugin
+# Remix Defi Explorer Plugin
 
-A plugin to verify contracts in Etherscan
+A plugin to install defi smart contracts.
 
-[![CircleCI](https://circleci.com/gh/Machinalabs/remix-etherscan-plugin.svg?style=svg)](https://circleci.com/gh/Machinalabs/remix-etherscan-plugin)
+<TODO CIRCLE Bagge>
 
-Full documentation https://remix-etherscan-plugin.readthedocs.io/en/latest/
+<TODO Read the docs badge>
 
 ### Install
 
 ```
-$ git clone git@github.com:Machinalabs/remix-etherscan-plugin.git
+$ git clone git@github.com:Machinalabs/remix-defi-explorer-plugin.git
 
 $ yarn
 
