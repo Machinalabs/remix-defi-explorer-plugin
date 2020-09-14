@@ -9,9 +9,6 @@ import {
 import { AppContext } from "./AppContext"
 import { Routes } from "./routes"
 
-import { useLocalStorage } from "./hooks/useLocalStorage"
-
-import { getNetworkName } from "./utils"
 import { ThemeType } from "./types"
 
 import "./App.css"
