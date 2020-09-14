@@ -3,7 +3,6 @@ import { PluginApi, IRemixApi, PluginClient, Api } from "@remixproject/plugin"
 type RemixClient = PluginApi<Readonly<IRemixApi>> &
   PluginClient<Api, Readonly<IRemixApi>>
 
-
 export const getNetworkName = async (client: RemixClient) => {
   const network = await client.call("network", "detectNetwork")
   if (!network) {

@@ -80,7 +80,6 @@ const App = () => {
     loadClient()
   }, [])
 
-
   return (
     <AppContext.Provider
       value={{
