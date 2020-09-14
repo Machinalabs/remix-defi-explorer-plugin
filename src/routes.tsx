@@ -6,7 +6,7 @@ import {
   RouteProps,
 } from "react-router-dom"
 
-import { ErrorView, HomeView} from "./views"
+import { ErrorView, HomeView } from "./views"
 import { DefaultLayout } from "./layouts"
 
 interface Props extends RouteProps {
@@ -30,8 +30,8 @@ const RouteWithHeader = ({ component: Component, ...rest }: Props) => {
 export const Routes = () => (
   <Router>
     <Switch>
-      <RouteWithHeader exact path="/" component={HomeView} from="/" />
-      <Route exact path="/error">
+      <RouteWithHeader exact={true} path="/" component={HomeView} from="/" />
+      <Route exact={true} path="/error">
         <ErrorView />
       </Route>
     </Switch>

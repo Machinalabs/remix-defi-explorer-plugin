@@ -17,7 +17,9 @@
     "eject": "react-scripts eject",
     "test:ci": "CI=true react-scripts test",
     "tslint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose",
+    "tslint:fix": "tslint --fix -p . -c tslint.json",
     "check-formatting": "prettier --write --list-different './src/**/*.tsx'",
+    "prettier": "prettier --write \"src/**/*.{ts,,tsx,js,json}\"",
     "deploy": "yarn build && surge --project ./build --domain machinalabs-remix-defi-explorer-plugin.surge.sh"
   },
   "eslintConfig": {

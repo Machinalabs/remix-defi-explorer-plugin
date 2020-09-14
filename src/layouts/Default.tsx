@@ -8,9 +8,5 @@ export const DefaultLayout: React.FC<PropsWithChildren<Props>> = ({
   children,
   from,
 }) => {
-  return (
-    <div>
-      {children}
-    </div>
-  )
+  return <div>{children}</div>
 }

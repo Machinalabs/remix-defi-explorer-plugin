@@ -92,7 +92,7 @@ const App = () => {
     })
 
     if (receiptsNotVerified.length > 0) {
-      let timer1 = setInterval(() => {
+      const timer1 = setInterval(() => {
         receiptsNotVerified.forEach(async (item) => {
           if (!clientInstanceRef.current) {
             return
