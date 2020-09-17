@@ -1,6 +1,6 @@
 # Remix Defi Explorer Plugin
 
-https://circleci.com/gh/Machinalabs/remix-defi-explorer-plugin.svg?style=svg
+[![CircleCI](https://circleci.com/gh/Machinalabs/remix-defi-explorer-plugin.svg?style=svg)](https://circleci.com/gh/Machinalabs/remix-defi-explorer-plugin) 
 
 A plugin to install defi smart contracts.
 
