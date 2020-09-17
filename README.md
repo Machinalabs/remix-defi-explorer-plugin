@@ -1,5 +1,7 @@
 # Remix Defi Explorer Plugin
 
+https://circleci.com/gh/Machinalabs/remix-defi-explorer-plugin.svg?style=svg
+
 A plugin to install defi smart contracts.
 
 <TODO CIRCLE Bagge>
