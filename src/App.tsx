@@ -44,29 +44,6 @@ const App = () => {
       await client.onload()
       setClientInstance(client)
       console.log("Remix Defi Explorer Plugin has been loaded")
-
-      client.solidity.on(
-        "compilationFinished",
-        (
-          fileName: string,
-          source: CompilationFileSources,
-          languageVersion: string,
-          data: CompilationResult
-        ) => {
-          console.log("New compilation received")
-          const newContractsNames = getNewContractNames(data)
-
-          const newContractsToSave: string[] = [
-            ...contractsRef.current,
-            ...newContractsNames,
-          ]
-
-          const uniqueContracts: string[] = [...new Set(newContractsToSave)]
-
-          setContracts(uniqueContracts)
-        }
-      )
-
       const currentTheme = await client.call("theme", "currentTheme")
       setThemeType(currentTheme.quality)
       client.on("theme", "themeChanged", (theme) => {
