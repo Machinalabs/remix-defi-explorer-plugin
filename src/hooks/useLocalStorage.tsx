@@ -1,6 +1,7 @@
 import { useState } from "react"
+import { Protocol } from "../types"
 
-export function useLocalStorage(key: string, initialValue: any) {
+export const useLocalStorage = (key: string, initialValue: any): any => {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
   const [storedValue, setStoredValue] = useState(() => {
@@ -21,8 +22,7 @@ export function useLocalStorage(key: string, initialValue: any) {
   const setValue = (value: any) => {
     try {
       // Allow value to be a function so we have same API as useState
-      const valueToStore =
-        value instanceof Function ? value(storedValue) : value
+      const valueToStore = value
       // Save state
       setStoredValue(valueToStore)
       // Save to local storage

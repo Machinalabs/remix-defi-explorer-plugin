@@ -9,33 +9,36 @@ import {
 import { AppContext } from "./AppContext"
 import { Routes } from "./routes"
 
-import { ThemeType } from "./types"
+import { Protocol, ProtocolName, ThemeType } from "./types"
 
 import "./App.css"
+import { useLocalStorage } from "./hooks/useLocalStorage"
 
 const devMode = { port: 8080 }
 
-export const getNewContractNames = (compilationResult: CompilationResult) => {
-  const compiledContracts = compilationResult.contracts
-  let result: string[] = []
-
-  for (const file of Object.keys(compiledContracts)) {
-    const newContractNames = Object.keys(compiledContracts[file])
-    result = [...result, ...newContractNames]
-  }
-
-  return result
+const getProtocols = (): Protocol[] => {
+  return [
+    {
+      name: ProtocolName.UMA,
+      isInstalled: false,
+      description: "Derivatives protocol"
+    }, {
+      name: ProtocolName.Uniswap,
+      isInstalled: false,
+      description: "The automatic market maker"
+    }
+  ]
 }
 
 const App = () => {
   const [clientInstance, setClientInstance] = useState(undefined as any)
-  const [contracts, setContracts] = useState([] as string[])
   const [themeType, setThemeType] = useState("dark" as ThemeType)
+  // @dev protocols: Protocol[]; setProtocols: (Protocol[])
+  const [protocols, setProtocols] = useLocalStorage("protocols", [] as Protocol[])
+  const [protocolsInstalled, setProtocolsInstalled] = useLocalStorage("protocolsInstalled", [] as Protocol[])
 
   const clientInstanceRef = useRef(clientInstance)
   clientInstanceRef.current = clientInstance
-  const contractsRef = useRef(contracts)
-  contractsRef.current = contracts
 
   useEffect(() => {
     console.log("Remix Defi Explorer loading...")
@@ -51,6 +54,21 @@ const App = () => {
       })
     }
 
+    const loadProtocols = () => {
+      console.log("Calling load protocols")
+      const allProtocolsTyped = protocols as unknown as Protocol[]
+      console.log("allProtocolsTyped.length", allProtocolsTyped.length)
+
+      console.log("allProtocolsTyped", allProtocolsTyped)
+
+      console.log("allProtocolsTyped", JSON.stringify(allProtocolsTyped))
+      if (allProtocolsTyped.length === 0) {
+        const allProtocols: Protocol[] = getProtocols()
+        setProtocols(allProtocols)
+      }
+    }
+
+    loadProtocols()
     loadClient()
   }, [])
 
@@ -58,10 +76,12 @@ const App = () => {
     <AppContext.Provider
       value={{
         clientInstance,
-        contracts,
-        setContracts,
+        protocols,
+        setProtocols,
         themeType,
         setThemeType,
+        setProtocolsInstalled,
+        protocolsInstalled
       }}
     >
       <Routes />

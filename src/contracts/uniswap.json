@@ -1,13 +1,13 @@
 {
-    "UniswapV2ERC20": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol",
-    "UniswapV2Factory": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol",
-    "UniswapV2Pair": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol",
-    "SafeMath": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/libraries/SafeMath.sol",
-    "Math": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/libraries/Math.sol",
-    "UQ112x112": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/libraries/UQ112x112.sol",
-    "IUniswapV2ERC20": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2ERC20.sol",
-    "IUniswapV2Factory": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2Factory.sol",
-    "IERC20": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/interfaces/IERC20.sol",
-    "IUniswapV2Callee": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2Callee.sol",
-    "IUniswapV2Pair": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2Pair.sol"
+    "UniswapV2ERC20.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol",
+    "UniswapV2Factory.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol",
+    "UniswapV2Pair.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol",
+    "libraries/SafeMath.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/libraries/SafeMath.sol",
+    "libraries/Math.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/libraries/Math.sol",
+    "libraries/UQ112x112.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/libraries/UQ112x112.sol",
+    "interfaces/IUniswapV2ERC20.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2ERC20.sol",
+    "interfaces/IUniswapV2Factory.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2Factory.sol",
+    "interfaces/IERC20.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/interfaces/IERC20.sol",
+    "interfaces/IUniswapV2Callee.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2Callee.sol",
+    "interfaces/IUniswapV2Pair.sol": "https://github.com/Machinalabs/uniswap-v2-core/blob/master/contracts/interfaces/IUniswapV2Pair.sol"
 }

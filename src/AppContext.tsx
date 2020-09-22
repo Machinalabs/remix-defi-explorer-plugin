@@ -1,14 +1,18 @@
 import React from "react"
 import { PluginApi, IRemixApi, Api, PluginClient } from "@remixproject/plugin"
 
-import { ThemeType } from "./types"
+import { Protocol, ThemeType } from "./types"
 
 export const AppContext = React.createContext({
   clientInstance: {} as PluginApi<Readonly<IRemixApi>> &
     PluginClient<Api, Readonly<IRemixApi>>,
-  contracts: [] as string[],
-  setContracts: (contracts: string[]) => {
-    console.log("Calling Set Contract Names")
+  protocols: [] as Protocol[],
+  setProtocols: (protocols: Protocol[]) => {
+    console.log("Calling Set Protocols")
+  },
+  protocolsInstalled: [] as Protocol[],
+  setProtocolsInstalled: (protocols: Protocol[]) => {
+    console.log("Calling Set Protocols Installed")
   },
   themeType: "dark" as ThemeType,
   setThemeType: (themeType: ThemeType) => {
