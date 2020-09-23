@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App app snapshot 1`] = `
+<div>
+  <div>
+    <div>
+      <header
+        class="form-group plugins-header py-3 px-4 border-bottom"
+      >
+        <p>
+          Learn about Defi by exploring the smart contract protocols.
+        </p>
+      </header>
+      <section>
+        <nav
+          class="plugins-list-header justify-content-between navbar navbar-expand-lg bg-light navbar-light align-items-center"
+        >
+          <span
+            class="navbar-brand plugins-list-title h6 mb-0 mr-2"
+          >
+            Protocols
+          </span>
+        </nav>
+        <div
+          class="list-group list-group-flush plugins-list-group"
+        >
+          <article
+            class="list-group-item py-1 plugins-list-group-item"
+            title="Uniswap"
+          >
+            <div
+              class="justify-content-between align-items-center mb-2"
+              style="display: flex; flex-direction: row;"
+            >
+              <h6
+                class="plugin-name"
+              >
+                Uniswap
+              </h6>
+              <button
+                class="btn btn-secondary btn-sm"
+                style="width: 5rem;"
+              >
+                Load
+              </button>
+            </div>
+            <p
+              class="text-body plugin-text"
+            >
+              The automatic market maker
+               
+              <a
+                href="https://uniswap.org/docs/v2/smart-contract-integration/quick-start/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="bi bi-link-45deg"
+                  fill="currentColor"
+                  height="1.2em"
+                  viewBox="0 0 16 16"
+                  width="1.2em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"
+                  />
+                  <path
+                    d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z"
+                  />
+                </svg>
+              </a>
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
