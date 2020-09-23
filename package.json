@@ -59,7 +59,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn tslint && yarn check-formatting && yarn build"
+      "pre-push": "yarn tslint && yarn check-formatting && yarn test && yarn build"
     }
   }
 }
