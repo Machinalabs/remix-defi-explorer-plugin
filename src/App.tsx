@@ -1,10 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 
-import {
-  createIframeClient,
-  CompilationFileSources,
-  CompilationResult,
-} from "@remixproject/plugin"
+import { createIframeClient } from "@remixproject/plugin"
 
 import { AppContext } from "./AppContext"
 import { Routes } from "./routes"
@@ -12,17 +8,12 @@ import { Routes } from "./routes"
 import { Protocol, ProtocolName, ThemeType } from "./types"
 
 import "./App.css"
-import { useLocalStorage } from "./hooks/useLocalStorage"
 
 const devMode = { port: 8080 }
 
 const getProtocols = (): Protocol[] => {
   return [
     {
-      name: ProtocolName.UMA,
-      isInstalled: false,
-      description: "Derivatives protocol"
-    }, {
       name: ProtocolName.Uniswap,
       isInstalled: false,
       description: "The automatic market maker"
@@ -34,8 +25,7 @@ const App = () => {
   const [clientInstance, setClientInstance] = useState(undefined as any)
   const [themeType, setThemeType] = useState("dark" as ThemeType)
   // @dev protocols: Protocol[]; setProtocols: (Protocol[])
-  const [protocols, setProtocols] = useLocalStorage("protocols", [] as Protocol[])
-  const [protocolsInstalled, setProtocolsInstalled] = useLocalStorage("protocolsInstalled", [] as Protocol[])
+  const [protocols, setProtocols] = useState([] as Protocol[])
 
   const clientInstanceRef = useRef(clientInstance)
   clientInstanceRef.current = clientInstance
@@ -55,13 +45,8 @@ const App = () => {
     }
 
     const loadProtocols = () => {
-      console.log("Calling load protocols")
       const allProtocolsTyped = protocols as unknown as Protocol[]
-      console.log("allProtocolsTyped.length", allProtocolsTyped.length)
 
-      console.log("allProtocolsTyped", allProtocolsTyped)
-
-      console.log("allProtocolsTyped", JSON.stringify(allProtocolsTyped))
       if (allProtocolsTyped.length === 0) {
         const allProtocols: Protocol[] = getProtocols()
         setProtocols(allProtocols)
@@ -79,9 +64,7 @@ const App = () => {
         protocols,
         setProtocols,
         themeType,
-        setThemeType,
-        setProtocolsInstalled,
-        protocolsInstalled
+        setThemeType
       }}
     >
       <Routes />

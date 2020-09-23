@@ -10,10 +10,6 @@ export const AppContext = React.createContext({
   setProtocols: (protocols: Protocol[]) => {
     console.log("Calling Set Protocols")
   },
-  protocolsInstalled: [] as Protocol[],
-  setProtocolsInstalled: (protocols: Protocol[]) => {
-    console.log("Calling Set Protocols Installed")
-  },
   themeType: "dark" as ThemeType,
   setThemeType: (themeType: ThemeType) => {
     console.log("Calling Set Theme Type")
