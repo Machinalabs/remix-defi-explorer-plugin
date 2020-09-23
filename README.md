@@ -1,12 +1,10 @@
 # Remix Defi Explorer Plugin
 
+A plugin to explore and learn defi smart contracts.
+
 [![CircleCI](https://circleci.com/gh/Machinalabs/remix-defi-explorer-plugin.svg?style=svg)](https://circleci.com/gh/Machinalabs/remix-defi-explorer-plugin) 
 
-A plugin to install defi smart contracts.
-
-<TODO CIRCLE Bagge>
-
-<TODO Read the docs badge>
+[![Documentation Status](https://readthedocs.org/projects/remix-defi-explorer-plugin/badge/?version=latest)](https://remix-defi-explorer-plugin.readthedocs.io/en/latest/?badge=latest)
 
 ### Install
 
