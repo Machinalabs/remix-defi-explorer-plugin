@@ -16,8 +16,8 @@ const getProtocols = (): Protocol[] => {
     {
       name: ProtocolName.Uniswap,
       isInstalled: false,
-      description: "The automatic market maker"
-    }
+      description: "The automatic market maker",
+    },
   ]
 }
 
@@ -45,12 +45,8 @@ const App = () => {
     }
 
     const loadProtocols = () => {
-      const allProtocolsTyped = protocols as unknown as Protocol[]
-
-      if (allProtocolsTyped.length === 0) {
-        const allProtocols: Protocol[] = getProtocols()
-        setProtocols(allProtocols)
-      }
+      const allProtocols: Protocol[] = getProtocols()
+      setProtocols(allProtocols)
     }
 
     loadProtocols()
@@ -64,7 +60,7 @@ const App = () => {
         protocols,
         setProtocols,
         themeType,
-        setThemeType
+        setThemeType,
       }}
     >
       <Routes />
