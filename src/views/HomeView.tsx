@@ -1,9 +1,10 @@
 import React, { useContext } from "react"
 
 import { AppContext } from "../AppContext"
+import { Protocol } from "../types"
 
 import UniswapContracts from "../contracts/uniswap.json"
-import { Protocol } from "../types"
+import UniswapDeployment from '../deployments/uniswap/deployment.json'
 
 export const HomeView: React.FC = () => {
   // const [hasError, setHasError] = useState(false)
@@ -79,7 +80,7 @@ const ActivationButton: React.FC<{ isInstalled: boolean }> = ({
 }) => {
   const { clientInstance } = useContext(AppContext)
 
-  const loadUniswap = () => {
+  const loadUniswap = async () => {
     Object.keys(UniswapContracts).map(async (item) => {
       const contractName = item as any
       const contracts = UniswapContracts as { [key: string]: any }
@@ -97,9 +98,12 @@ const ActivationButton: React.FC<{ isInstalled: boolean }> = ({
         `browser/uniswap/${contractName}`,
         `${content}`
       )
-
-      // write scenario file
     })
+
+    await (clientInstance.fileManager as any).setFile(
+      `browser/uniswap/deployment.json`,
+      `${JSON.stringify(UniswapDeployment)}`
+    )
   }
 
   return (
