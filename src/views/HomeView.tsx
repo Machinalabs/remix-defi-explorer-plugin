@@ -4,7 +4,7 @@ import { AppContext } from "../AppContext"
 import { Protocol } from "../types"
 
 import UniswapContracts from "../contracts/uniswap.json"
-import UniswapDeployment from '../deployments/uniswap/deployment.json'
+import UniswapDeployment from "../deployments/uniswap/deployment.json"
 
 export const HomeView: React.FC = () => {
   // const [hasError, setHasError] = useState(false)
