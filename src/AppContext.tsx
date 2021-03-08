@@ -1,7 +1,7 @@
 import React from "react"
-import {  PluginClient } from "@remixproject/plugin"
-import { PluginApi, Api } from "@remixproject/plugin-utils";
-import { IRemixApi } from "@remixproject/plugin-api";
+import { PluginClient } from "@remixproject/plugin"
+import { PluginApi, Api } from "@remixproject/plugin-utils"
+import { IRemixApi } from "@remixproject/plugin-api"
 
 import { Protocol, ThemeType } from "./types"
 

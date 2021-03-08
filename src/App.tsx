@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 
-import { PluginClient } from "@remixproject/plugin";
-import { createClient } from "@remixproject/plugin-webview";
+import { PluginClient } from "@remixproject/plugin"
+import { createClient } from "@remixproject/plugin-webview"
 
 import { AppContext } from "./AppContext"
 import { Routes } from "./routes"
