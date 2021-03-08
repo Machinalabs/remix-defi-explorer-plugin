@@ -10,8 +10,6 @@ import { Protocol, ProtocolName, ThemeType } from "./types"
 
 import "./App.css"
 
-const devMode = { port: 8080 }
-
 const getProtocols = (): Protocol[] => {
   return [
     {
