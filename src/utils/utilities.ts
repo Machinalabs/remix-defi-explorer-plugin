@@ -1,4 +1,6 @@
-import { PluginApi, IRemixApi, PluginClient, Api } from "@remixproject/plugin"
+import { PluginClient } from "@remixproject/plugin"
+import { PluginApi, Api } from "@remixproject/plugin-utils"
+import { IRemixApi } from "@remixproject/plugin-api"
 
 type RemixClient = PluginApi<Readonly<IRemixApi>> &
   PluginClient<Api, Readonly<IRemixApi>>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 
-import { createIframeClient } from "@remixproject/plugin"
+import { PluginClient } from "@remixproject/plugin"
+import { createClient } from "@remixproject/plugin-webview"
 
 import { AppContext } from "./AppContext"
 import { Routes } from "./routes"
@@ -8,8 +9,6 @@ import { Routes } from "./routes"
 import { Protocol, ProtocolName, ThemeType } from "./types"
 
 import "./App.css"
-
-const devMode = { port: 8080 }
 
 const getProtocols = (): Protocol[] => {
   return [
@@ -32,16 +31,11 @@ const App = () => {
 
   useEffect(() => {
     console.log("Remix Defi Explorer loading...")
-    const client = createIframeClient({ devMode })
+    const client = createClient(new PluginClient())
     const loadClient = async () => {
       await client.onload()
       setClientInstance(client)
       console.log("Remix Defi Explorer Plugin has been loaded")
-      const currentTheme = await client.call("theme", "currentTheme")
-      setThemeType(currentTheme.quality)
-      client.on("theme", "themeChanged", (theme) => {
-        setThemeType(theme.quality)
-      })
     }
 
     const loadProtocols = () => {
